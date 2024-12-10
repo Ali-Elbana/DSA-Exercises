@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3-Insertion Sort/1-Introduction.md",
+                "file": "Sorting Algorithms/1-Insertion Sort.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1-Introduction"
+              "title": "1-Insertion Sort"
             }
           },
           {
@@ -178,9 +178,10 @@
   },
   "active": "72b85ea4e3b17ce0",
   "lastOpenFiles": [
+    "Pasted image 20241211013526.png",
     "2-Algorithms Analysis/2-Big O Notation.md",
-    "3-Insertion Sort/1-Introduction.md",
-    "3-Insertion Sort",
+    "Sorting Algorithms/1-Insertion Sort.md",
+    "Sorting Algorithms",
     "Pasted image 20241209212654.png",
     "2-Algorithms Analysis/1-Introduction.md",
     "1-Getting Started/1-Introduction.md",
