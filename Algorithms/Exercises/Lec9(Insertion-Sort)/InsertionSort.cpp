@@ -1,28 +1,18 @@
 /*
 *
 * Problem description:
-* Calculate the correlation.
+* Implement the insertion sort algorithm.
 *
 */
 
 #include <iostream>
-#include <string>
 #include <vector>
-#include <numeric>  // For std::inner_product
-#include <algorithm>  // For std::inner_product
-#include <cmath>
 #include <stdexcept> 
 
 using std::cout     ;
 using std::cin      ;
 using std::endl     ;
-using std::string   ;
 using std::vector   ;
-using std::istream  ;
-using std::ostream  ;
-using std::inner_product ;
-
-auto constexpr EXPONENT = 2;
 
 /********************* Function declarations *********************/
 /****************************************************************/
