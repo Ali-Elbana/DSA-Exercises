@@ -79,8 +79,8 @@ These examples illustrate how limits provide insight into an algorithm's behavio
 ---
 #### **7. Practical Steps in Algorithm Analysis**
 
-1. Identify the input size (nn).
-2. Count the basic operations performed as a function of nn.
+1. Identify the input size (n).
+2. Count the basic operations performed as a function of n.
 3. Express the operations in terms of a function.
 4. Analyze the function's domain, range, and limits.
 5. Use asymptotic notation for generalization.
