@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6-Dynamic Programming/6.3.1- 01 Knapsack Problem - Algorithm.md",
+                "file": "7-Graph/7.1-Introduction.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "6.3.1- 01 Knapsack Problem - Algorithm"
+              "title": "7.1-Introduction"
             }
           },
           {
@@ -180,7 +180,11 @@
   "active": "925fdb5c60184b7d",
   "lastOpenFiles": [
     "6-Dynamic Programming/6.2.1-Longest Common Subsequent - Algorithm.md",
+    "7-Graph/7.1-Introduction.md",
+    "7-Graph/7.2.1-.md",
+    "7-Graph/7.2.2-.md",
     "6-Dynamic Programming/6.3.1- 01 Knapsack Problem - Algorithm.md",
+    "7-Graph",
     "6-Dynamic Programming/6.2.2-Longest Common Subsequent - Code.md",
     "6-Dynamic Programming/6.3.2-  01 Knapsack Problem - Code.md",
     "6-Dynamic Programming/6.1.1-Stagecoach - Algorithm.md",
