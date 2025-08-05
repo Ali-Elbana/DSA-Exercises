@@ -8,31 +8,31 @@
         "type": "tabs",
         "children": [
           {
-            "id": "72b85ea4e3b17ce0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "5-Greedy Algorithms/5.5.1-Fractional Knapsack Problem - Algorithm.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "5.5.1-Fractional Knapsack Problem - Algorithm"
-            }
-          },
-          {
             "id": "925fdb5c60184b7d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "5-Greedy Algorithms/5.4.1-Huffman Coding - Algorithm.md",
+                "file": "6-Dynamic Programming/6.3.1- 01 Knapsack Problem - Algorithm.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "5.4.1-Huffman Coding - Algorithm"
+              "title": "6.3.1- 01 Knapsack Problem - Algorithm"
+            }
+          },
+          {
+            "id": "9550f9e288fae655",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "6-Dynamic Programming/6.2.1-Longest Common Subsequent - Algorithm.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "6.2.1-Longest Common Subsequent - Algorithm"
             }
           }
         ]
@@ -92,7 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "269d512622a02218",
@@ -177,11 +177,19 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "72b85ea4e3b17ce0",
+  "active": "925fdb5c60184b7d",
   "lastOpenFiles": [
-    "5-Greedy Algorithms/5.4.1-Huffman Coding - Algorithm.md",
+    "6-Dynamic Programming/6.2.1-Longest Common Subsequent - Algorithm.md",
+    "6-Dynamic Programming/6.3.1- 01 Knapsack Problem - Algorithm.md",
+    "6-Dynamic Programming/6.2.2-Longest Common Subsequent - Code.md",
+    "6-Dynamic Programming/6.3.2-  01 Knapsack Problem - Code.md",
+    "6-Dynamic Programming/6.1.1-Stagecoach - Algorithm.md",
+    "6-Dynamic Programming/6.1.2-Stagecoach - Code.md",
     "5-Greedy Algorithms/5.5.1-Fractional Knapsack Problem - Algorithm.md",
     "5-Greedy Algorithms/5.5.2-Fractional Knapsack Problem - Code.md",
+    "5-Greedy Algorithms/5.4.1-Huffman Coding - Algorithm.md",
+    "Shortest Path Problems.md",
+    "6-Dynamic Programming",
     "5-Greedy Algorithms/5.4.2- Huffman Coding - Code.md",
     "2-Algorithms Analysis/2-Big O Notation.md",
     "5-Greedy Algorithms/5.3-Sorted Characters Frequencies Problem.md",
