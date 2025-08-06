@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "7-Graph/7.1-Introduction.md",
+                "file": "7-Graph/7.3.1-Breadth First Search – Algorithm.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "7.1-Introduction"
+              "title": "7.3.1-Breadth First Search – Algorithm"
             }
           },
           {
@@ -179,10 +179,12 @@
   },
   "active": "925fdb5c60184b7d",
   "lastOpenFiles": [
+    "7-Graph/7.3.2-Breadth First Search – Code.md",
+    "7-Graph/7.3.1-Breadth First Search – Algorithm.md",
+    "7-Graph/7.2.2-Prim’s Minimum Spanning Tree – Code.md",
+    "7-Graph/7.2.1-Prim’s Minimum Spanning Tree – Algorithm.md",
     "6-Dynamic Programming/6.2.1-Longest Common Subsequent - Algorithm.md",
     "7-Graph/7.1-Introduction.md",
-    "7-Graph/7.2.1-.md",
-    "7-Graph/7.2.2-.md",
     "6-Dynamic Programming/6.3.1- 01 Knapsack Problem - Algorithm.md",
     "7-Graph",
     "6-Dynamic Programming/6.2.2-Longest Common Subsequent - Code.md",
@@ -209,7 +211,6 @@
     "Pasted image 20250108133441.png",
     "Pasted image 20250108133628.png",
     "5-Greedy Algorithms",
-    "3-Sorting Algorithms/3.1-Comparison Based/3.1.3-Merge Sort.md",
     "4-Searching Algorithms",
     "3-Sorting Algorithms/3.2-Non-Comparison Based",
     "3-Sorting Algorithms/3.1-Comparison Based",
