@@ -1,24 +1,38 @@
 {
   "main": {
-    "id": "15ea4fd9ee7e83a9",
+    "id": "d79c48ae8c20bd85",
     "type": "split",
     "children": [
       {
-        "id": "3bc7656211f35910",
+        "id": "c8466f3ad8ab903a",
         "type": "tabs",
         "children": [
           {
-            "id": "9550f9e288fae655",
+            "id": "10d0b207ab188139",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "7-Graph/7.4.1-Depth First Search – Algorithm.md",
+                "file": "1-Getting Started/1.2-DataTypes and Memory.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "7.4.1-Depth First Search – Algorithm"
+              "title": "1.2-DataTypes and Memory"
+            }
+          },
+          {
+            "id": "c8190231577036b7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1-Getting Started/1.1-Data and Memory.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "1.1-Data and Memory"
             }
           }
         ]
@@ -27,15 +41,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "1824fabd93b39166",
+    "id": "26da029e192a3ee8",
     "type": "split",
     "children": [
       {
-        "id": "9bf085262bccf3da",
+        "id": "57c32a409bf73176",
         "type": "tabs",
         "children": [
           {
-            "id": "73a8eea409d77b79",
+            "id": "43f2f1aabf646cba",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -48,7 +62,7 @@
             }
           },
           {
-            "id": "ac8fd0ba219b5122",
+            "id": "0167aa0e85a99b60",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -65,7 +79,7 @@
             }
           },
           {
-            "id": "6866b7d317d29892",
+            "id": "14f8a7d3dc5e4426",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -81,20 +95,20 @@
     "width": 200
   },
   "right": {
-    "id": "269d512622a02218",
+    "id": "0238590a04d8ac9e",
     "type": "split",
     "children": [
       {
-        "id": "3b4bb3cdd69f7602",
+        "id": "8d34ec5b71a82630",
         "type": "tabs",
         "children": [
           {
-            "id": "26ffadbff9a68fba",
+            "id": "9674d7f2dd24b409",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1-Introduction.md",
+                "file": "1-Getting Started/1.2-DataTypes and Memory.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,46 +118,51 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 1-Introduction"
+              "title": "Backlinks for 1.2-DataTypes and Memory"
             }
           },
           {
-            "id": "371ac976db5e4626",
+            "id": "c411e24ffdc55f83",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1-Introduction.md",
+                "file": "1-Getting Started/1.2-DataTypes and Memory.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from 1-Introduction"
+              "title": "Outgoing links from 1.2-DataTypes and Memory"
             }
           },
           {
-            "id": "9956f6d72dda584a",
+            "id": "03dca2c397c025c3",
             "type": "leaf",
             "state": {
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": true
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-tags",
               "title": "Tags"
             }
           },
           {
-            "id": "1fc3c3bc18466046",
+            "id": "fabd2fcd09a7588c",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "1-Introduction.md"
+                "file": "1-Getting Started/1.2-DataTypes and Memory.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 1-Introduction"
+              "title": "Outline of 1.2-DataTypes and Memory"
             }
           }
         ]
@@ -163,47 +182,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "9550f9e288fae655",
+  "active": "10d0b207ab188139",
   "lastOpenFiles": [
-    "7-Graph/7.5.1-Dijkstra’s Shortest Path – Algorithm.md",
-    "7-Graph/7.4.1-Depth First Search – Algorithm.md",
-    "7-Graph/7.4.1-Depth First Search – Code.md",
-    "7-Graph/7.5.2-Dijkstra’s Shortest Path – Code.md",
-    "7-Graph/7.3.1-Breadth First Search – Algorithm.md",
-    "7-Graph/7.3.2-Breadth First Search – Code.md",
-    "6-Dynamic Programming/6.2.1-Longest Common Subsequent - Algorithm.md",
-    "7-Graph/7.2.2-Prim’s Minimum Spanning Tree – Code.md",
-    "7-Graph/7.2.1-Prim’s Minimum Spanning Tree – Algorithm.md",
-    "7-Graph/7.1-Introduction.md",
-    "6-Dynamic Programming/6.3.1- 01 Knapsack Problem - Algorithm.md",
-    "7-Graph",
-    "6-Dynamic Programming/6.2.2-Longest Common Subsequent - Code.md",
-    "6-Dynamic Programming/6.3.2-  01 Knapsack Problem - Code.md",
-    "6-Dynamic Programming/6.1.1-Stagecoach - Algorithm.md",
-    "6-Dynamic Programming/6.1.2-Stagecoach - Code.md",
-    "5-Greedy Algorithms/5.5.1-Fractional Knapsack Problem - Algorithm.md",
-    "5-Greedy Algorithms/5.5.2-Fractional Knapsack Problem - Code.md",
-    "5-Greedy Algorithms/5.4.1-Huffman Coding - Algorithm.md",
-    "Shortest Path Problems.md",
-    "6-Dynamic Programming",
-    "5-Greedy Algorithms/5.4.2- Huffman Coding - Code.md",
-    "2-Algorithms Analysis/2-Big O Notation.md",
-    "5-Greedy Algorithms/5.3-Sorted Characters Frequencies Problem.md",
-    "5-Greedy Algorithm/5.4Huffman Coding",
-    "3-Sorting Algorithms/3.1-Comparison Based/3.1.4-Quick Sort.md",
-    "4-Searching Algorithms/4.1-Binary Search.md",
-    "5-Greedy Algorithms/5.1-Introduction.md",
-    "3-Sorting Algorithms/3.1-Comparison Based/3.1.1-Bubble Sort.md",
-    "Pasted image 20250108133441.png",
-    "Pasted image 20250108133628.png",
-    "5-Greedy Algorithms",
-    "4-Searching Algorithms",
-    "3-Sorting Algorithms/3.2-Non-Comparison Based",
-    "3-Sorting Algorithms/3.1-Comparison Based",
-    "Pasted image 20241211013526.png",
-    "3-Sorting Algorithms",
-    "Pasted image 20241209212654.png",
-    "1-Getting Started",
-    "2-Algorithms Analysis"
+    "2-Array/2.2-Operations Implementation.md",
+    "2-Array/2.1-Introduction.md",
+    "1-Getting Started/1.2-DataTypes and Memory.md",
+    "2-Array",
+    "1-Getting Started/1.1-Data and Memory.md",
+    "1-Getting Started.md",
+    "1-Getting Started"
   ]
 }
