@@ -11,7 +11,7 @@
  understand more what's happened]
 ------------------------------------------------------------
 * Notes:
-* [This is for educational purpose]
+* [This is for an educational purpose]
 ============================================================
 */
 
