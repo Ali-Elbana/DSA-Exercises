@@ -4,7 +4,7 @@
 * File:    [SLinkedList.cpp]
 * Author:  [Ali El-bana]
 * Date:    [2025-08-11]
-* Version: [v1.0]
+* Version: [v1.1]
 ------------------------------------------------------------
 * Description:
 * [Self implementation of a single linked list]
@@ -22,6 +22,7 @@
 /* =================== Namespace Usage ================== */
 using std::cout;
 using std::cin;
+using std::cerr;
 using std::endl;
 
 
@@ -76,20 +77,20 @@ public:
 	}
 	
 	// Methods
-	int getAt(size_t idx)
+	int getDataAt(size_t idx)
 	{
 		Node * currNode = head;
 		
 		// Validation
 		if(idx >= length)
 		{
-			cout << "\nIndex out of range.";
+			cerr << "\nIndex out of range.";
 		}
 		else
 		{
 			size_t i{0};
 			
-			while(i != idx)
+			while(i < idx)
 			{
 				currNode = currNode->next;
 				i++;
@@ -150,7 +151,7 @@ int main(void)
 {
     // ----- Initialization ----- //
     system("cls");
-    cout << "Program started...\n";
+    cout << "\nProgram started...\n";
 	LinkedList list;
     
     // ----- Logic ----- //
@@ -161,7 +162,8 @@ int main(void)
 	list.printList();
 	
 	size_t length = list.getLength();
-	
+	int data = list.getDataAt(3);
+	cout << "\nThe Node at index " << 3 << " its data = " << data;
 	cout << "\nThe linked list length = " << length << '\n';
 	
     // ----- End ----- //
