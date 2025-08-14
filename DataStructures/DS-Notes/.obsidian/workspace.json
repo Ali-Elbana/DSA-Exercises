@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "4-Stack/4.1.1-Stack – Linked List based – implementation - Explanation.md",
+                "file": "4-Stack/4.2-Stack – Array based – implementation - Code.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "4.1.1-Stack – Linked List based – implementation - Explanation"
+              "title": "4.2-Stack – Array based – implementation - Code"
             }
           },
           {
@@ -184,9 +184,10 @@
   },
   "active": "10d0b207ab188139",
   "lastOpenFiles": [
-    "3-Linked List/3.1.1-Introduction – Singly list implementation - Explanation.md",
-    "4-Stack/4.1.1-Stack – Linked List based – implementation - Explanation.md",
     "4-Stack/4.1.2-Stack – Linked List based – implementation - Code.md",
+    "4-Stack/4.2-Stack – Array based – implementation - Code.md",
+    "4-Stack/4.1.1-Stack – Linked List based – implementation - Explanation.md",
+    "3-Linked List/3.1.1-Introduction – Singly list implementation - Explanation.md",
     "3-Linked List/3.4-Linked List VS Array Time Complexity.md",
     "4-Stack",
     "3-Linked List/3.3.2-Doubly list implementation - Code.md",
