@@ -1,4 +1,4 @@
-# DSA Exercises
+# DSA Notes & Exercises
 
 ![Data Structures and Algorithms](https://github.com/user-attachments/assets/8d5b5297-cb00-4c34-8d98-3fe4d37feffb)
 
