@@ -1,13 +1,13 @@
 /*
 ============================================================
-* Project: [Single Linked List Implemnetation 2]
-* File:    [SLinkedList2.cpp]
+* Project: [Double Linked List Implemnetation]
+* File:    [DLinkedList.cpp]
 * Author:  [Ali El-bana]
-* Date:    [2025-08-12]
+* Date:    [2025-08-13]
 * Version: [v1.0]
 ------------------------------------------------------------
 * Description:
-* [Adding methods like: getNodeAt(), insertAfter(), insertBefore(), deleteNode()]
+* [Self implementation of a double linked list]
 ------------------------------------------------------------
 * Notes:
 * [This is for an educational purpose]
@@ -47,9 +47,9 @@ class Node
 public:
 	int data;
 	Node * next;
-	
+	Node * prev;
 	// Constructor
-	Node(int val) : data(val), next(nullptr){}
+	Node(int val) : data(val), next(nullptr), prev(nullptr){}
 };
 // ▲▲▲ End of Node ▲▲▲
 
@@ -140,7 +140,8 @@ public:
 		}
 		else
 		{
-			tail->next = newNode;
+			tail->next = newNode; // prevNode->next points to newNode
+			newNode->prev = tail;
 			newNode->next = nullptr;
 			tail = newNode;
 		}
@@ -185,6 +186,7 @@ public:
 			Node * currNode = getNodeAt(idx);
 			Node * newNode = new Node(newData);
 			
+			newNode->prev = currNode;
 			newNode->next = currNode->next;
 			currNode->next = newNode;
 			
@@ -195,6 +197,7 @@ public:
 			}
 			else
 			{
+				newNode->next->prev = newNode;
 			}
 			
 			length++; 
@@ -207,7 +210,7 @@ public:
 	void insertBefore(size_t idx, int newData)
 	{
 		// Validation
-		if(idx >= length) 
+		if(idx >= length)
 		{
 			cerr << "\nIndex out of range.";
 		}
@@ -216,18 +219,22 @@ public:
 			Node * currNode = head;
 			Node * newNode = new Node(newData);
 			
+			newNode->prev = nullptr;
 			newNode->next = currNode;
+			currNode->prev = newNode;
 			head = newNode;	
 			
 			length++; 
 		}
 		else // Insert in between
 		{
-			Node * currNode = getNodeAt(idx - 1); // idx - 1 --> add after the pervios node
+			Node * currNode = getNodeAt(idx); 
 			Node * newNode = new Node(newData);
 			
-			newNode->next = currNode->next;
-			currNode->next = newNode;
+			newNode->next = currNode;
+			newNode->prev = currNode->prev;
+			currNode->prev = newNode;
+			newNode->prev->next = newNode;
 			
 			length++; 
 		}
@@ -254,6 +261,7 @@ public:
 		else if(idx == 0) // Delete head 
 		{
 			Node * currNode = head;
+			currNode->next->prev = nullptr;
 			head = currNode->next; // Update head to the next node
 			delete currNode; 
 			length--; 
@@ -261,17 +269,16 @@ public:
 		else if(idx == (length - 1)) // Delete tail 
 		{
 			Node * currNode = tail;
-			Node * prevNode = getNodeAt(length - 2); // Node before the tail
-			prevNode->next = currNode->next;
-			tail = prevNode;
+			currNode->prev->next = nullptr;
+			tail = currNode->prev;
 			delete currNode;
 			length--; 
 		}
 		else // Delete in between node
 		{
 			Node * currNode = getNodeAt(idx);
-			Node * prevNode = getNodeAt(idx - 1);
-			prevNode->next = currNode->next;
+			currNode->prev->next = currNode->next;
+			currNode->next->prev = currNode->prev;
 			delete currNode;
 			length--; 
 		}
@@ -298,8 +305,15 @@ int main(void)
 	list.insertLast(20);
 	list.insertLast(30);
 	list.insertLast(40);
+	
 	list.inserAfter(1, 25);
+	
+	size_t length = list.getLength();
+	
+	list.inserAfter(length - 1, 45); // Insert after tail
+	
 	list.insertBefore(4, 35);
+	
 	list.printList();
 	
 	// Delete head:
@@ -307,7 +321,7 @@ int main(void)
 	list.deleteNode(0);
 	list.printList();
 	
-	size_t length = list.getLength();
+	length = list.getLength();
 	
 	// Delete tail:
 	cout << "\nDelete the tail of the list:";
