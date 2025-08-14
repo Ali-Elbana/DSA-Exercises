@@ -2,7 +2,7 @@
 
 ![Data Structures and Algorithms](https://github.com/user-attachments/assets/8d5b5297-cb00-4c34-8d98-3fe4d37feffb)
 
-Welcome to my personal DSA Exercises repository! This collection of data structures and algorithms exercises is designed to enhance my coding skills and deepen my understanding of fundamental concepts in computer science.
+Welcome to my personal DSA Notes and Exercises repository! This collection of data structures and algorithms notes and exercises is designed to enhance my coding skills and deepen my understanding of fundamental concepts in computer science.
 
 ## 📚 Table of Contents
 
@@ -15,13 +15,20 @@ Welcome to my personal DSA Exercises repository! This collection of data structu
 - A variety of exercises covering different data structures:
   - Arrays
   - Linked Lists
-  - Trees
-  - Graphs
+  - Stacks
+  - Queues
+  - Pairs
+  - Hash Tables
+  - Binary Trees
+  - Heaps
+  - Priority Queues
 - Algorithmic challenges:
   - Sorting
   - Searching
+  - Greedy
   - Dynamic Programming
-- Solutions and explanations for each exercise
+  - Graph
+- Notes, Solutions and explanations for each exercise
 
 ## 🚀 Getting Started
 
@@ -39,9 +46,9 @@ To get a local copy of this repository up and running, follow these steps:
 
 ## 🛠️ Usage
 
-- This repository contains exercises organized by topics. Each folder includes:
+- This repository contains notes and exercises organized by topics. Each folder includes:
+  - Organized Notes 
   - Problem Statements
-  - Low-level Design
   - Solution Code
  
 
