@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "4-Stack/4.2-Stack – Array based – implementation - Code.md",
+                "file": "5-Queue/5.1.1-Queue – Linked List Based – Implementation - Explanation.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "4.2-Stack – Array based – implementation - Code"
+              "title": "5.1.1-Queue – Linked List Based – Implementation - Explanation"
             }
           },
           {
@@ -184,10 +184,13 @@
   },
   "active": "10d0b207ab188139",
   "lastOpenFiles": [
-    "4-Stack/4.1.2-Stack – Linked List based – implementation - Code.md",
-    "4-Stack/4.2-Stack – Array based – implementation - Code.md",
-    "4-Stack/4.1.1-Stack – Linked List based – implementation - Explanation.md",
     "3-Linked List/3.1.1-Introduction – Singly list implementation - Explanation.md",
+    "4-Stack/4.1.1-Stack – Linked List based – implementation - Explanation.md",
+    "5-Queue/5.1.1-Queue – Linked List Based – Implementation - Explanation.md",
+    "4-Stack/4.1.2-Stack – Linked List based – implementation - Code.md",
+    "5-Queue/5.1.2-Queue – Linked List Based – Implementation - Code.md",
+    "4-Stack/4.2-Stack – Array based – implementation - Code.md",
+    "5-Queue",
     "3-Linked List/3.4-Linked List VS Array Time Complexity.md",
     "4-Stack",
     "3-Linked List/3.3.2-Doubly list implementation - Code.md",
