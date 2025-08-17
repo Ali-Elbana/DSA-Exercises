@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "5-Queue/5.1.1-Queue – Linked List Based – Implementation - Explanation.md",
+                "file": "6-Pair/6.1.1-KeyValuePair – Dictionary – Explanation.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "5.1.1-Queue – Linked List Based – Implementation - Explanation"
+              "title": "6.1.1-KeyValuePair – Dictionary – Explanation"
             }
           },
           {
@@ -182,11 +182,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "10d0b207ab188139",
+  "active": "43f2f1aabf646cba",
   "lastOpenFiles": [
+    "7-Hash",
+    "6-Pair/6.1.2-KeyValuePair – Dictionary – Code.md",
+    "6-Pair/6.1.1-KeyValuePair – Dictionary – Explanation.md",
     "3-Linked List/3.1.1-Introduction – Singly list implementation - Explanation.md",
-    "4-Stack/4.1.1-Stack – Linked List based – implementation - Explanation.md",
     "5-Queue/5.1.1-Queue – Linked List Based – Implementation - Explanation.md",
+    "6-Pair",
+    "4-Stack/4.1.1-Stack – Linked List based – implementation - Explanation.md",
     "4-Stack/4.1.2-Stack – Linked List based – implementation - Code.md",
     "5-Queue/5.1.2-Queue – Linked List Based – Implementation - Code.md",
     "4-Stack/4.2-Stack – Array based – implementation - Code.md",
