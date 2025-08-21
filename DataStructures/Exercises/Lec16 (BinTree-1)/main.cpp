@@ -51,7 +51,24 @@ int main()
     // ----- Display the tree -----
     cout << "\nTree structure:" << endl;
     tree_char.Print();
-    
+	
+	// ----- Traverse in different orders -----
+    tree_char.preOrder();
+	tree_char.inOrder();
+	tree_char.postOrder();
+	
+	// ----- Find node in the tree -----
+	tree_char.find('I');
+	tree_char.find('J');
+	
+	// ----- Find node from the tree -----
+	tree_char.deleteNode('D');
+	tree_char.deleteNode('K');
+	
+	// ----- Display the tree after deletion -----
+    cout << "\nTree structure:" << endl;
+    tree_char.Print();
+	
     // ----- End -----
     cout << "Program completed successfully!" << endl;
     return 0;
