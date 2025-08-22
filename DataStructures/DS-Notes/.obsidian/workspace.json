@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "8-Binary Tree/8.2.1-Binary Tree – Implementation  - Explanation.md",
+                "file": "9-Binary Search Tree/9.1.2-Binary Search Tree – Code.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "8.2.1-Binary Tree – Implementation  - Explanation"
+              "title": "9.1.2-Binary Search Tree – Code"
             }
           },
           {
@@ -183,12 +183,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "43f2f1aabf646cba",
+  "active": "10d0b207ab188139",
   "lastOpenFiles": [
+    "9-Binary Search Tree/9.1.1-Binary Search Tree – Introduction.md",
+    "9-Binary Search Tree/9.1.2-Binary Search Tree – Code.md",
+    "8-Binary Tree/8.2.1-Binary Tree – Implementation  - Explanation.md",
     "9-Binary Search Tree",
     "8-Binary Tree/8.1.1-Introduction to Binary Tree - Explanation.md",
     "7-Hash/7.1.1-Hashing – Introduction – FNV-1a - Explanation.md",
-    "8-Binary Tree/8.2.1-Binary Tree – Implementation  - Explanation.md",
     "8-Binary Tree/8.2.2-Binary Tree – Implementation  - Code.md",
     "8-Binary Tree/8.1.2-Introduction to Binary Tree - Code.md",
     "7-Hash/7.3.2-Hash Table – Implementation - Code.md",
@@ -215,7 +217,6 @@
     "3-Linked List/3.2.2-Singly list implementation 2 - Code.md",
     "3-Linked List/3.2.1-Singly list implementation 2 - Explanation.md",
     "2-Array/2.2.1-Operations Implementation - Explanation.md",
-    "2-Array/2.2.2-Operations Implementation - Code.md",
     "3-Linked List",
     "2-Array",
     "1-Getting Started"
