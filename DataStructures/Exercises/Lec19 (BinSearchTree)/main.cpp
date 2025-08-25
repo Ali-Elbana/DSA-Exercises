@@ -54,6 +54,31 @@ int main()
 	tree_int.find(3);
 	tree_int.find(7);
 
+	// ----- Delete node from the tree -----
+    tree_int.deleteNode(7);
+	tree_int.deleteNode(4);
+    cout << "\nTree structure:" << endl;
+    tree_int.Print();
+    
+    tree_int.deleteNode(2);
+    cout << "\nTree structure:" << endl;
+    tree_int.Print();
+    
+    tree_int.deleteNode(1);
+    cout << "\nTree structure:" << endl;
+    tree_int.Print();
+    
+    tree_int.deleteNode(5);
+    cout << "\nTree structure:" << endl;
+    tree_int.Print();
+    
+    tree_int.deleteNode(3);
+    cout << "\nTree structure:" << endl;
+    tree_int.Print();
+    
+    tree_int.deleteNode(6);
+    cout << "\nTree structure:" << endl;
+    tree_int.Print();
 
 	/*
 	// ----- Traverse in different orders -----
