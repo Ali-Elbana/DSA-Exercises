@@ -35,7 +35,29 @@ int main()
 
     // ----- Create and populate binary search tree -----
     BinaryTree<int> tree_int;
-
+	
+	cout << "\nInserting elements: 1, 2, 3, 4, 5, 6, 7" << endl;
+	
+	// Insert skewed data (creates right-skewed tree)
+    tree_int.Insert(1);
+    tree_int.Insert(2);
+    tree_int.Insert(3);
+    tree_int.Insert(4);
+    tree_int.Insert(5);
+    tree_int.Insert(6);
+    tree_int.Insert(7);
+    
+    cout << "Original skewed tree:";
+    tree_int.Print();
+    tree_int.inOrder(); // Will show: 1 2 3 4 5 6
+    
+    // Balance the tree
+    tree_int.balance();
+    
+    cout << "\nBalanced tree:";
+    tree_int.Print();
+	
+	/*
     cout << "\nInserting elements: 4, 2, 1, 3, 5, 6" << endl;
 
     tree_int.Insert(4);
@@ -44,6 +66,7 @@ int main()
     tree_int.Insert(3);
     tree_int.Insert(5);
     tree_int.Insert(6);
+	tree_int.Insert(4);
 
 
     // ----- Display the tree -----
@@ -79,20 +102,13 @@ int main()
     tree_int.deleteNode(6);
     cout << "\nTree structure:" << endl;
     tree_int.Print();
-
+	*/
+	
 	/*
 	// ----- Traverse in different orders -----
     tree_int.preOrder();
 	tree_int.inOrder();
 	tree_int.postOrder();
-
-	// ----- Find node from the tree -----
-	tree_int.deleteNode('D');
-	tree_int.deleteNode('K');
-
-	// ----- Display the tree after deletion -----
-    cout << "\nTree structure:" << endl;
-    tree_int.Print();
 	*/
 
     // ----- End -----

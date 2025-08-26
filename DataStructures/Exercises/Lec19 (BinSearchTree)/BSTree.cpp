@@ -79,6 +79,8 @@ private:
 	TreeNode<Tdata>* findHelper(TreeNode<Tdata>* node, const Tdata & _data);
     TreeNode<Tdata>* findMin(TreeNode<Tdata>* node);
     void deleteNodeHelper(TreeNode<Tdata>* nodeToDelete);
+    void collectInOrder(TreeNode<Tdata>* node, vector<Tdata>& sortedData);
+	TreeNode<Tdata>* buildBalancedTree(vector<Tdata>& sortedData, int start, int end, TreeNode<Tdata>* parent);
     // ▲▲▲ End of Private Helper Methods ▲▲▲
 	
 public:
@@ -96,6 +98,7 @@ public:
     void postOrder();
 	TreeNode<Tdata>* find(const Tdata & _data);
     void deleteNode(Tdata _data);
+	void balance();
     // ▲▲▲ End of Public Methods ▲▲▲
 
 };
@@ -522,5 +525,69 @@ void BinaryTree<Tdata>::deleteNode(Tdata _data)
     cout << "Element " << _data << " deleted from the tree." << endl;
 }
 // ▲▲▲ End of deleteNode ▲▲▲
+
+// ▼▼▼ collectInOrder Definition ▼▼▼
+template <typename Tdata>
+void BinaryTree<Tdata>::collectInOrder(TreeNode<Tdata>* node, vector<Tdata>& sortedData)
+{
+    if(node != nullptr)
+    {
+        collectInOrder(node->Left, sortedData);
+        sortedData.push_back(node->Data);
+        collectInOrder(node->Right, sortedData);
+    }
+}
+// ▲▲▲ End of collectInOrder ▲▲▲
+
+// ▼▼▼ buildBalancedTree Definition ▼▼▼
+template <typename Tdata>
+TreeNode<Tdata>* BinaryTree<Tdata>::buildBalancedTree(vector<Tdata>& sortedData, int start, int end, TreeNode<Tdata>* parent)
+{
+    if(start > end)
+    {
+        return nullptr;
+    }
+    
+    // Find the middle element
+    int mid = start + (end - start) / 2;
+    
+    // Create new node with middle element
+    TreeNode<Tdata>* newNode = new TreeNode<Tdata>(sortedData[mid]);
+    newNode->Parent = parent;
+    
+    // Recursively build left and right subtrees
+    newNode->Left = buildBalancedTree(sortedData, start, mid - 1, newNode);
+    newNode->Right = buildBalancedTree(sortedData, mid + 1, end, newNode);
+    
+    return newNode;
+}
+// ▲▲▲ End of buildBalancedTree ▲▲▲
+
+// ▼▼▼ balance Definition ▼▼▼
+template <typename Tdata>
+void BinaryTree<Tdata>::balance()
+{
+    if(root == nullptr)
+    {
+        cout << "Tree is already empty (balanced)!" << endl;
+        return;
+    }
+    
+    cout << "Balancing the tree..." << endl;
+    
+    // Step 1: Collect all data in sorted order
+    vector<Tdata> sortedData;
+    collectInOrder(root, sortedData);
+    
+    // Step 2: Destroy the old tree
+    destroyTree(root);
+    
+    // Step 3: Build a new balanced tree
+    root = buildBalancedTree(sortedData, 0, sortedData.size() - 1, nullptr);
+    
+    cout << "Tree has been balanced successfully!" << endl;
+}
+// ▲▲▲ End of balance ▲▲▲
+
 
 /* ======================= End of File =================== */

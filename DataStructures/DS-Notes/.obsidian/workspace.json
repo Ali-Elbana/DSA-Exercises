@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "9-Binary Search Tree/9.3.2-Binary Search Tree – Balance - Code.md",
+                "file": "9-Binary Search Tree/9.3.1-Binary Search Tree – Balance - Explanation.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "9.3.2-Binary Search Tree – Balance - Code"
+              "title": "9.3.1-Binary Search Tree – Balance - Explanation"
             }
           },
           {
@@ -185,11 +185,11 @@
   },
   "active": "10d0b207ab188139",
   "lastOpenFiles": [
+    "9-Binary Search Tree/9.1.1-Binary Search Tree – Introduction.md",
     "9-Binary Search Tree/9.3.1-Binary Search Tree – Balance - Explanation.md",
     "9-Binary Search Tree/9.3.2-Binary Search Tree – Balance - Code.md",
     "9-Binary Search Tree/9.2.1-Binary Search Tree - Delete - Explanation.md",
     "9-Binary Search Tree/9.2.2-Binary Search Tree - Delete - Code.md",
-    "9-Binary Search Tree/9.1.1-Binary Search Tree – Introduction.md",
     "8-Binary Tree/8.1.1-Introduction to Binary Tree - Explanation.md",
     "9-Binary Search Tree/9.1.2-Binary Search Tree – Code.md",
     "7-Hash/7.1.1-Hashing – Introduction – FNV-1a - Explanation.md",
