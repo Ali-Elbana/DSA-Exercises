@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10-Heap/10.1.2-Heap – Implementation - Code.md",
+                "file": "11-Priority Queue/11.1.1-PriorityQueue - Explanation.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "10.1.2-Heap – Implementation - Code"
+              "title": "11.1.1-PriorityQueue - Explanation"
             }
           },
           {
@@ -183,12 +183,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "43f2f1aabf646cba",
+  "active": "10d0b207ab188139",
   "lastOpenFiles": [
+    "9-Binary Search Tree/9.1.1-Binary Search Tree – Introduction.md",
+    "11-Priority Queue/11.1.1-PriorityQueue - Explanation.md",
+    "11-Priority Queue/11.1.2-PriorityQueue - Code.md",
+    "10-Heap/10.1.2-Heap – Implementation - Code.md",
     "11-Priority Queue",
     "10-Heap/10.1.1-Heap – Implementation - Explanation.md",
-    "9-Binary Search Tree/9.1.1-Binary Search Tree – Introduction.md",
-    "10-Heap/10.1.2-Heap – Implementation - Code.md",
     "9-Binary Search Tree/9.3.1-Binary Search Tree – Balance - Explanation.md",
     "10-Heap",
     "9-Binary Search Tree/9.3.2-Binary Search Tree – Balance - Code.md",
@@ -215,11 +217,9 @@
     "6-Pair",
     "4-Stack/4.1.1-Stack – Linked List based – implementation - Explanation.md",
     "4-Stack/4.1.2-Stack – Linked List based – implementation - Code.md",
-    "5-Queue/5.1.2-Queue – Linked List Based – Implementation - Code.md",
     "5-Queue",
     "4-Stack",
     "3-Linked List",
-    "2-Array",
-    "1-Getting Started"
+    "2-Array"
   ]
 }

@@ -1,0 +1,440 @@
+/*
+============================================================
+* Project: Priority Queue Implementation (Min-Heap Based)
+* File:    main.cpp
+* Author:  [Ali El-bana]
+* Date:    [2025-08-28]
+* Version: v1.0
+------------------------------------------------------------
+* Description:
+* Priority queue implementation using min-heap with
+* priority-data pairs, comprehensive error handling, and
+* visual tree representation capabilities
+------------------------------------------------------------
+* Notes:
+* - Implements min-heap property (lower priority = higher precedence)
+* - Dynamic array-based storage using std::vector
+* - Stores priority-data pairs using std::pair<int, int>
+* - Includes tree visualization with priority display
+* - Added modern C++ features and comprehensive error handling
+============================================================
+*/
+
+/* ====================== Includes ====================== */
+#include <iostream>
+#include <vector>
+#include <cmath>
+#include <string>
+#include <sstream>
+#include <stdexcept>
+#include <iomanip>
+
+/* =================== Namespace Usage ================== */
+using std::cout;
+using std::endl;
+using std::vector;
+using std::pair;
+using std::string;
+using std::make_pair;
+
+/* ===================== Class Definition =============== */
+// ▼▼▼ Class: PriorityQueue (Min-Heap Based Implementation) ▼▼▼
+class PriorityQueue 
+{
+private:
+    // ▼▼▼ Private Data Members ▼▼▼
+    vector<pair<int, int>> data_list;  // Vector storing <priority, data> pairs
+    size_t queue_size;                 // Current number of elements in queue
+    // ▲▲▲ End of Private Data Members ▲▲▲
+
+    // ▼▼▼ Private Helper Methods ▼▼▼
+    /**
+     * @brief Calculates parent index for given node index
+     * @param index Current node index
+     * @return Parent node index
+     * @complexity O(1)
+     */
+    size_t getParentIndex(size_t index) const 
+	{
+        return (index > 0) ? (index - 1) / 2 : 0;
+    }
+
+    /**
+     * @brief Calculates left child index for given node index
+     * @param index Current node index
+     * @return Left child node index
+     * @complexity O(1)
+     */
+    size_t getLeftChildIndex(size_t index) const 
+	{
+        return 2 * index + 1;
+    }
+
+    /**
+     * @brief Calculates right child index for given node index
+     * @param index Current node index
+     * @return Right child node index
+     * @complexity O(1)
+     */
+    size_t getRightChildIndex(size_t index) const 
+	{
+        return 2 * index + 2;
+    }
+
+    /**
+     * @brief Swaps two elements in the priority queue
+     * @param index1 First element index
+     * @param index2 Second element index
+     * @complexity O(1)
+     */
+    void swapElements(size_t index1, size_t index2) 
+	{
+        std::swap(data_list[index1], data_list[index2]);
+    }
+    // ▲▲▲ End of Private Helper Methods ▲▲▲
+
+public:
+    // ▼▼▼ Constructor ▼▼▼
+    /**
+     * @brief Default constructor - initializes empty priority queue
+     * @complexity O(1)
+     */
+    PriorityQueue() : queue_size(0) 
+	{
+        data_list.reserve(16);  // Reserve initial capacity for efficiency
+    }
+    // ▲▲▲ End of Constructor ▲▲▲
+
+    // ▼▼▼ Enqueue Method (Insert with Priority) ▼▼▼
+    /**
+     * @brief Inserts element with given priority into the queue
+     * @param priority Priority value (lower value = higher priority)
+     * @param data Data value to store
+     * @complexity O(log n) - due to upward bubbling
+     * @note Lower priority numbers indicate higher precedence
+     */
+    void enqueue(int priority, int data) 
+	{
+        // Get insertion position (end of heap)
+        size_t current_index = queue_size;
+        
+        // Add new element to the end
+        data_list.push_back(make_pair(priority, data));
+        queue_size++;
+        
+        // ▼▼▼ Bubble Up Process (Maintain Min-Heap Property) ▼▼▼
+        // Continue bubbling up while not at root and current has higher priority than parent
+        while(current_index > 0) 
+		{
+            size_t parent_index = getParentIndex(current_index);
+            
+            // If current priority >= parent priority, heap property is satisfied
+            if(data_list[current_index].first >= data_list[parent_index].first) 
+			{
+                break;
+            }
+            
+            // Swap with parent (current has higher priority)
+            swapElements(current_index, parent_index);
+            
+            // Move up to parent position
+            current_index = parent_index;
+        }
+        // ▲▲▲ End of Bubble Up Process ▲▲▲
+    }
+    // ▲▲▲ End of Enqueue Method ▲▲▲
+
+    // ▼▼▼ Dequeue Method (Extract Highest Priority) ▼▼▼
+    /**
+     * @brief Removes and returns the highest priority element
+     * @return Pair containing <priority, data> of highest priority element
+     * @throws std::runtime_error if queue is empty
+     * @complexity O(log n) - due to downward bubbling
+     */
+    pair<int, int> dequeue() 
+	{
+        // Check if queue is empty
+        if(queue_size == 0) 
+		{
+            throw std::runtime_error("Priority queue is empty - cannot dequeue");
+        }
+        
+        // Store highest priority element (root) to return
+        pair<int, int> highest_priority_element = data_list[0];
+        
+        // Move last element to root position
+        data_list[0] = data_list[queue_size - 1];
+        queue_size--;
+        
+        // ▼▼▼ Bubble Down Process (Restore Min-Heap Property) ▼▼▼
+        size_t current_index = 0;
+        
+        // Continue while at least left child exists
+        while(getLeftChildIndex(current_index) < queue_size) 
+		{
+            size_t left_child_index = getLeftChildIndex(current_index);
+            size_t right_child_index = getRightChildIndex(current_index);
+            size_t highest_priority_child_index = left_child_index;
+            
+            // Find child with highest priority (smallest priority value)
+            if(right_child_index < queue_size && 
+                data_list[right_child_index].first < data_list[left_child_index].first) 
+			{
+                highest_priority_child_index = right_child_index;
+            }
+            
+            // If current element has higher or equal priority than both children, stop
+            if(data_list[current_index].first <= data_list[highest_priority_child_index].first) 
+			{
+                break;
+            }
+            
+            // Swap with highest priority child
+            swapElements(current_index, highest_priority_child_index);
+            
+            // Move down to child position
+            current_index = highest_priority_child_index;
+        }
+        // ▲▲▲ End of Bubble Down Process ▲▲▲
+        
+        return highest_priority_element;
+    }
+    // ▲▲▲ End of Dequeue Method ▲▲▲
+
+    // ▼▼▼ Peek Method (View Highest Priority Without Removing) ▼▼▼
+    /**
+     * @brief Returns the highest priority element without removing it
+     * @return Pair containing <priority, data> of highest priority element
+     * @throws std::runtime_error if queue is empty
+     * @complexity O(1)
+     */
+    pair<int, int> peek() const 
+	{
+        if(queue_size == 0) 
+		{
+            throw std::runtime_error("Priority queue is empty - cannot peek");
+        }
+        return data_list[0];
+    }
+    // ▲▲▲ End of Peek Method ▲▲▲
+
+    // ▼▼▼ Utility Methods ▼▼▼
+    /**
+     * @brief Checks if the priority queue has any elements
+     * @return true if queue contains elements, false if empty
+     * @complexity O(1)
+     */
+    bool hasData() const 
+	{
+        return queue_size > 0;
+    }
+
+    /**
+     * @brief Returns the number of elements in the priority queue
+     * @return Current queue size
+     * @complexity O(1)
+     */
+    size_t getSize() const 
+	{
+        return queue_size;
+    }
+
+    /**
+     * @brief Checks if the priority queue is empty
+     * @return true if queue is empty, false otherwise
+     * @complexity O(1)
+     */
+    bool empty() const 
+	{
+        return queue_size == 0;
+    }
+    // ▲▲▲ End of Utility Methods ▲▲▲
+
+    // ▼▼▼ Display Methods ▼▼▼
+    /**
+     * @brief Prints all queue elements in linear order (data values only)
+     * @complexity O(n)
+     */
+    void print() const 
+	{
+        cout << "Queue contents (data only): ";
+        for(size_t i = 0; i < queue_size; i++) 
+		{
+            cout << data_list[i].second << " - ";
+        }
+        cout << endl;
+    }
+
+    /**
+     * @brief Prints all queue elements with their priorities
+     * @complexity O(n)
+     */
+    void printWithPriorities() const 
+	{
+        cout << "Queue contents (data[priority]): ";
+        for(size_t i = 0; i < queue_size; i++) 
+		{
+            cout << data_list[i].second << "[" << data_list[i].first << "] - ";
+        }
+        cout << endl;
+    }
+    // ▲▲▲ End of Display Methods ▲▲▲
+
+    // ▼▼▼ Tree Visualization Method ▼▼▼
+    /**
+     * @brief Draws a visual representation of the priority queue as a binary tree
+     * @complexity O(n)
+     * @note Displays both data values and priorities in format: data[priority]
+     */
+    void draw() const 
+	{
+        // Return if queue is empty
+        if(queue_size == 0) 
+		{
+            cout << "Priority queue is empty - nothing to draw" << endl;
+            return;
+        }
+        
+        // Calculate tree dimensions
+        int levels_count = static_cast<int>(std::log2(queue_size)) + 1;
+        int line_width = static_cast<int>(std::pow(2, levels_count - 1));
+        
+        size_t element_index = 0;  // Tracks current element being processed
+        
+        cout << "Priority Queue Tree Structure:" << endl;
+        cout << "Format: data[priority]" << endl;
+        cout << string(50, '-') << endl;
+        
+        // ▼▼▼ Level-by-Level Tree Drawing ▼▼▼
+        for(int level = 0; level < levels_count; level++) 
+		{
+            // Calculate nodes at current level
+            int nodes_at_level = static_cast<int>(std::pow(2, level));
+            
+            // Calculate spacing for proper tree alignment
+            int leading_space = static_cast<int>(std::ceil(line_width - nodes_at_level / 2.0));
+            int space_between_nodes = static_cast<int>(std::ceil(levels_count / static_cast<double>(nodes_at_level)));
+            space_between_nodes = (space_between_nodes < 1) ? 1 : space_between_nodes;
+            
+            // Build output string for current level
+            std::ostringstream level_output;
+            level_output << string(leading_space + space_between_nodes, ' ');
+            
+            size_t level_start_index = element_index;
+            
+            // Process all nodes at current level
+            for(; element_index < level_start_index + nodes_at_level; element_index++) 
+			{
+                // Stop if we've processed all elements
+                if(element_index >= queue_size) 
+				{
+                    break;
+                }
+                
+                // Add current element in format: data[priority]
+                level_output << data_list[element_index].second 
+                           << "[" << data_list[element_index].first << "]"
+                           << string(space_between_nodes, ' ');
+            }
+            
+            level_output << string(leading_space, ' ') << endl;
+            cout << level_output.str();
+        }
+        // ▲▲▲ End of Level-by-Level Tree Drawing ▲▲▲
+        
+        cout << string(50, '-') << endl;
+    }
+    // ▲▲▲ End of Tree Visualization Method ▲▲▲
+};
+// ▲▲▲ End of PriorityQueue Class ▲▲▲
+
+/* ==================== Main Application ================= */
+/**
+ * @brief Demonstration program for priority queue functionality
+ * @return 0 on successful execution
+ */
+int main() {
+    // ▼▼▼ Priority Queue Creation and Testing ▼▼▼
+    cout << "Priority Queue Demonstration Program" << endl;
+    cout << "====================================" << endl;
+    cout << "Note: Lower priority numbers = Higher precedence" << endl << endl;
+    
+    PriorityQueue pq;  // Create empty priority queue
+    
+    // ▼▼▼ Enqueue Operations ▼▼▼
+    cout << "Enqueuing elements with priorities:" << endl;
+    cout << "Data: 100, Priority: 3" << endl;
+    pq.enqueue(3, 100);
+    
+    cout << "Data: 200, Priority: 1" << endl;
+    pq.enqueue(1, 200);
+    
+    cout << "Data: 300, Priority: 4" << endl;
+    pq.enqueue(4, 300);
+    
+    cout << "Data: 400, Priority: 2" << endl;
+    pq.enqueue(2, 400);
+    
+    cout << "Data: 500, Priority: 1" << endl;
+    pq.enqueue(1, 500);
+    // ▲▲▲ End of Enqueue Operations ▲▲▲
+    
+    // ▼▼▼ Display Queue State ▼▼▼
+    cout << "\nCurrent queue size: " << pq.getSize() << endl;
+    pq.printWithPriorities();
+    cout << endl;
+    pq.draw();
+    // ▲▲▲ End of Display Queue State ▲▲▲
+    
+    // ▼▼▼ Peek Operation ▼▼▼
+    try 
+	{
+        auto highest_priority = pq.peek();
+        cout << "\nHighest priority element (peek): " 
+             << highest_priority.second << " [priority: " 
+             << highest_priority.first << "]" << endl;
+    } 
+	catch(const std::runtime_error& e) 
+	{
+        cout << "Error during peek: " << e.what() << endl;
+    }
+    // ▲▲▲ End of Peek Operation ▲▲▲
+    
+    // ▼▼▼ Dequeue Operations ▼▼▼
+    cout << "\nDequeuing all elements in priority order:" << endl;
+    try 
+	{
+        while(pq.hasData()) 
+		{
+            auto element = pq.dequeue();
+            cout << "Dequeued: Data=" << element.second 
+                 << ", Priority=" << element.first << endl;
+        }
+    } 
+	catch(const std::runtime_error& e) 
+	{
+        cout << "Error during dequeue: " << e.what() << endl;
+    }
+    // ▲▲▲ End of Dequeue Operations ▲▲▲
+    
+    // ▼▼▼ Empty Queue Testing ▼▼▼
+    cout << "\nTesting operations on empty queue:" << endl;
+    cout << "Queue size: " << pq.getSize() << endl;
+    cout << "Is empty: " << (pq.empty() ? "Yes" : "No") << endl;
+    
+    // Test error handling
+    try 
+	{
+        pq.dequeue();  // Should throw exception
+    } 
+	catch(const std::runtime_error& e) 
+	{
+        cout << "Expected error caught: " << e.what() << endl;
+    }
+    // ▲▲▲ End of Empty Queue Testing ▲▲▲
+    
+    cout << "\nProgram completed successfully!" << endl;
+    return 0;
+}
+
+/* ======================= End of File =================== */
