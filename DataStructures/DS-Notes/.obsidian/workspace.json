@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "9-Binary Search Tree/9.3.1-Binary Search Tree – Balance - Explanation.md",
+                "file": "10-Heap/10.1.2-Heap – Implementation - Code.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "9.3.1-Binary Search Tree – Balance - Explanation"
+              "title": "10.1.2-Heap – Implementation - Code"
             }
           },
           {
@@ -183,10 +183,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "10d0b207ab188139",
+  "active": "43f2f1aabf646cba",
   "lastOpenFiles": [
+    "11-Priority Queue",
+    "10-Heap/10.1.1-Heap – Implementation - Explanation.md",
     "9-Binary Search Tree/9.1.1-Binary Search Tree – Introduction.md",
+    "10-Heap/10.1.2-Heap – Implementation - Code.md",
     "9-Binary Search Tree/9.3.1-Binary Search Tree – Balance - Explanation.md",
+    "10-Heap",
     "9-Binary Search Tree/9.3.2-Binary Search Tree – Balance - Code.md",
     "9-Binary Search Tree/9.2.1-Binary Search Tree - Delete - Explanation.md",
     "9-Binary Search Tree/9.2.2-Binary Search Tree - Delete - Code.md",
@@ -212,11 +216,8 @@
     "4-Stack/4.1.1-Stack – Linked List based – implementation - Explanation.md",
     "4-Stack/4.1.2-Stack – Linked List based – implementation - Code.md",
     "5-Queue/5.1.2-Queue – Linked List Based – Implementation - Code.md",
-    "4-Stack/4.2-Stack – Array based – implementation - Code.md",
     "5-Queue",
-    "3-Linked List/3.4-Linked List VS Array Time Complexity.md",
     "4-Stack",
-    "3-Linked List/3.3.2-Doubly list implementation - Code.md",
     "3-Linked List",
     "2-Array",
     "1-Getting Started"
